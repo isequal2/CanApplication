@@ -42,7 +42,7 @@ pipeline {
         
          stage(" Sonar Scan"){
 	steps{
-             sh "mvn --help sonar:sonar"  
+             sh "mvnpo sonar:sonar"  
     } 
 	}
          
