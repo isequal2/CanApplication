@@ -42,7 +42,7 @@ pipeline {
         
          stage(" Sonar Scan"){
 	steps{
-             sh "mvnpo sonar:sonar"  
+             sh "mvn sonar:sonar"  
     } 
 	}
          
@@ -50,7 +50,7 @@ pipeline {
     
     stage('Build Docker Image'){
 	steps{
-        sh 'docker build -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
+        sh 'docker builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
     }
 	}
         
