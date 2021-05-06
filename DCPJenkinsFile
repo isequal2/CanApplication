@@ -42,7 +42,7 @@ pipeline {
         
          stage(" Sonar Scan"){
 	steps{
-             sh "mvn sonar:sonar -DskipTests"  
+             sh "mvn sonar:sonar -DskipTests -Dsonar.projectKey=petclinicDemo"  
     } 
 	}
          
