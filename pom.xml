@@ -34,7 +34,7 @@
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 		<sonar.host.url>https://sonarqube.kaiburr.com:9000/</sonar.host.url>
-		<sonar.login>1b9e830cbc252995d0777021b9e397cb7f43a98a</sonar.login>
+		<sonar.login>193259cab6efab687f319e7e6c9626bdd439440a</sonar.login>
 		<!-- <sonar.password>admin</sonar.password> -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
