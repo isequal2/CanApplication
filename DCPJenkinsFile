@@ -45,12 +45,17 @@ pipeline {
              sh "mvn sonar:sonar -DskipTests -Dsonar.projectKey=petclinicTrainingDemo"  
     } 
 	}
-         
+        
+     stage('Code Quality Gate'){
+	steps{
+        shd
+    }
+	}    
 
     
     stage('Build Docker Image'){
 	steps{
-        shD 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
+        sh 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
     }
 	}
         
