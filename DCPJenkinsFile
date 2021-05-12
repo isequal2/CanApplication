@@ -48,7 +48,7 @@ pipeline {
         
      stage('Code Quality Gate'){
 	steps{
-        shd
+         shd 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
     }
 	}    
 
