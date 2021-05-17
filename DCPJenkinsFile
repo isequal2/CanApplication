@@ -48,24 +48,29 @@ pipeline {
         
      stage('Code Quality Gate'){
 	steps{
-         shd 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
+         sh 'echo quality'
+         //sh 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
     }
 	}    
 
     
     stage('Build Docker Image'){
 	steps{
-        sh 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
+        sh 'echo Build'
+        //sh 'EdockerDe builld -t 13.59.106.246:8083/petclinic:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
     }
 	}
         
     
     stage('Push Docker Image'){
 	steps{
-	    sh '''
+        sh 'echo push'
+	    /*
+            sh '''
         docker login -u admin -p admin123 13.59.106.246:8083
         '''
          sh 'docker push 13.59.106.246:8083/petclinic:${BUILD_NUMBER} >&1 | tee docker.txt'
+         */
      }
 	 }
      
